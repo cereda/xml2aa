@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<adaptiveAutomaton>
+
+  <transitions>
+
+    <transition from="0" symbol="a" to="1" />
+    <transition from="1" symbol="b" to="2" />
+    <transition from="2" symbol="a" to="1" />
+
+  </transitions>
+
+  <submachines>
+
+    <submachine name="M" main="true">
+      <state name="0" start="true" />
+      <state name="1" />
+      <state name="2" accepting="true"/>
+    </submachine>
+
+  </submachines>
+
+</adaptiveAutomaton>

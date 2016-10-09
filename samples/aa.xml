@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<adaptiveAutomaton>
+
+  <transitions>
+
+    <transition from="0" symbol="a" to="1"/>
+    <transition from="1" symbol="b" to="2"/>
+    <transition from="2" symbol="c" to="3"/>
+
+    <transition from="1" symbol="a" to="1" >
+      <postAdaptiveFunction name="A">
+        <parameter>2</parameter>
+        <parameter>3</parameter>
+      </postAdaptiveFunction>
+    </transition>
+
+  </transitions>
+
+  <submachines>
+
+    <submachine name="M" main="true">
+      <state name="0" start="true" />
+      <state name="1" />
+      <state name="2" />
+      <state name="3" accepting="true"/>
+    </submachine>
+
+  </submachines>
+
+  <actions>
+    <adaptiveAction name="A">
+      <parameter>p1</parameter>
+      <parameter>p2</parameter>
+      <variable>?x</variable>
+      <variable>?y</variable>
+      <generator>g1*</generator>
+      <generator>g2*</generator>
+
+      <action type="query" from="?x" symbol="b" to="p1"/>
+      <action type="remove" from="?x" symbol="b" to="p1"/>
+
+      <action type="query" from="?y" symbol="c" to="p2"/>
+      <action type="remove" from="?y" symbol="c" to="p2"/>
+
+      <action type="remove" from="1" symbol="a" to="1">
+        <postAdaptiveFunction name="A">
+          <parameter>p1</parameter>
+          <parameter>p2</parameter>
+        </postAdaptiveFunction>
+      </action>
+
+      <action type="add" from="?x" symbol="b" to="g1*"/>
+      <action type="add" from="g1*" symbol="b" to="p1"/>
+      <action type="add" from="?y" symbol="c" to="g2*"/>
+      <action type="add" from="g2*" symbol="c" to="p2"/>
+
+      <action type="add" from="1" symbol="a" to="1">
+        <postAdaptiveFunction name="A">
+          <parameter>g1*</parameter>
+          <parameter>g2*</parameter>
+        </postAdaptiveFunction>
+      </action>
+    </adaptiveAction>
+  </actions>
+
+</adaptiveAutomaton>
