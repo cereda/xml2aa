@@ -20,6 +20,7 @@
  */
 package br.usp.poli.lta.cereda.xml2aa.xml.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,7 +63,7 @@ public class XMLAdaptiveAction {
      * @return Objeto.
      */
     public List<String> getVariables() {
-        return variables;
+        return variables == null ? new ArrayList<>() : variables;
     }
 
     /**
@@ -80,7 +81,7 @@ public class XMLAdaptiveAction {
      * @return Objeto.
      */
     public List<String> getGenerators() {
-        return generators;
+        return generators == null ? new ArrayList<>() : generators;
     }
 
     /**
@@ -98,7 +99,7 @@ public class XMLAdaptiveAction {
      * @return Objeto.
      */
     public List<String> getParameters() {
-        return parameters;
+        return parameters == null ? new ArrayList<>() : parameters;
     }
 
     /**

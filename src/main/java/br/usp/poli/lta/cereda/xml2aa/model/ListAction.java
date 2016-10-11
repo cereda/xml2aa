@@ -461,9 +461,13 @@ public class ListAction extends Action {
      */
     private void bind(Object... parameters) {
 
-        // parâmetros
-        for (int i = 0; i < parameters.length; i++) {
-            map.put(xml.getParameters().get(i), parameters[i]);
+        // parâmetros podem ser nulos
+        if (parameters != null) {
+         
+            // parâmetros
+            for (int i = 0; i < parameters.length; i++) {
+                map.put(xml.getParameters().get(i), parameters[i]);
+            }
         }
 
         // variáveis
