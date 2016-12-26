@@ -32,7 +32,7 @@ import org.apache.commons.lang3.text.WordUtils;
  * Classe utilitária.
  *
  * @author Paulo Roberto Massa Cereda
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public class Utils {

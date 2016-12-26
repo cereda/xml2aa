@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  * Valida a especificação XML do autômato adaptativo.
  *
  * @author Paulo Roberto Massa Cereda
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public class AutomatonValidator {

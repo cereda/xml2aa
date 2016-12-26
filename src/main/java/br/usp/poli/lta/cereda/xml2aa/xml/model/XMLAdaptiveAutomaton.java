@@ -26,7 +26,7 @@ import java.util.List;
  * Especificação XML de um autômato adaptativo.
  *
  * @author Paulo Roberto Massa Cereda
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public class XMLAdaptiveAutomaton {

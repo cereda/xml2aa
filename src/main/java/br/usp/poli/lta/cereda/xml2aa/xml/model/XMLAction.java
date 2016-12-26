@@ -24,7 +24,7 @@ package br.usp.poli.lta.cereda.xml2aa.xml.model;
  * Especificação XML de uma ação adaptativa elementar.
  *
  * @author Paulo Roberto Massa Cereda
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public class XMLAction {
